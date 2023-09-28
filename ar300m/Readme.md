@@ -17,7 +17,7 @@ https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
 git clone https://github.com/openwrt/openwrt.git && cd openwrt
 
 # Select a specific code revision
-git checkout v22.03.5
+git checkout v23.05.0-rc3
 
 # Update the feeds
 ./scripts/feeds update -a
@@ -25,9 +25,9 @@ git checkout v22.03.5
 
 # Configure the firmware image
 cat > .config << EOF
-CONFIG_TARGET_mediatek=y
-CONFIG_TARGET_mediatek_filogic=y
-CONFIG_TARGET_mediatek_filogic_DEVICE_glinet_gl-mt3000=y
+CONFIG_TARGET_ath79=y
+CONFIG_TARGET_ath79_generic=y
+CONFIG_TARGET_ath79_generic_DEVICE_glinet_gl-ar300m16=y
 CONFIG_PACKAGE_cgi-io=y
 CONFIG_PACKAGE_liblua=y
 CONFIG_PACKAGE_liblucihttp=y
@@ -72,5 +72,5 @@ EOF
 make defconfig
 make V=s -j1
 
-# image path : openwrt/bin/targets/mediatek/filogic/openwrt-mediatek-filogic-glinet_gl-mt3000-squashfs-sysupgrade.bin
+# image path : openwrt/bin/targets/ath79/generic/openwrt-ath79-generic-glinet_gl-ar300m16-squashfs-sysupgrade.bin
 ```
