@@ -72,6 +72,6 @@ EOF
 make defconfig
 make V=s -j1
 
-# image path : openwrt/bin/targets/ath79/nand/openwrt-ath79-nand-glinet_gl-ar750s-nor-nand-squashfs-sysupgrade.bin
-# warning: the image needs to be upgraded in the system management interface.
+# Image path : openwrt/bin/targets/ath79/nand/openwrt-ath79-nand-glinet_gl-ar750s-nor-nand-squashfs-sysupgrade.bin
+# Warning: the image needs to be upgraded in the system management interface.
 ```
