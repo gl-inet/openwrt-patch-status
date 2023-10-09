@@ -23,7 +23,7 @@ git checkout v2.11.0
 ./setup.py --setup && cd openwrt
 ./scripts/gen_config.py ../profiles/glinet_ax1800.yml
 
-# configure the firmware image
+# Configure the firmware image
 cat >> .config << EOF
 CONFIG_PACKAGE_cgi-io=y
 CONFIG_PACKAGE_liblua=y
@@ -68,12 +68,12 @@ EOF
 # Change the dependency of firewall
 sed -i 's/+uci-firewall/+firewall/g' ./package/feeds/luci/luci-app-firewall/Makefile
 
-# delete root password
-# file path : wlan-ap/openwrt/package/base-files/files/etc/shadow
+# Delete root password
+# File path : wlan-ap/openwrt/package/base-files/files/etc/shadow
 
 # Build the firmware image
 make defconfig
 make V=s -j1
-# image path : wlan-ap/openwrt/bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_ax1800-squashfs-sysupgrade.tar
-# warning : the image needs to be upgraded in the system management interface.
+# Image path : wlan-ap/openwrt/bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_ax1800-squashfs-sysupgrade.tar
+# Warning : the image needs to be upgraded in the system management interface.
 ```
