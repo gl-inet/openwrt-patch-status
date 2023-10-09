@@ -1,33 +1,30 @@
 ### openwrt support status
 
-| Version       | status    | link                                                  |
-| ------------- | --------- | ----------------------------------------------------- |
-| openwrt 19.07 | supported | https://github.com/openwrt/openwrt/tree/openwrt-23.05 |
-| openwrt 21.02 | supported |                                                       |
-| openwrt 22.04 | supported |                                                       |
-| openwrt 23.05 | supported |                                                       |
+| Version      | status       | link                                                         |
+| ------------ | ------------ | ------------------------------------------------------------ |
+| openwrt main | not supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.11.0 |
+|              |              |                                                              |
+|              |              |                                                              |
+|              |              |                                                              |
 
 ### compile
 
 ```
-#Setting up your build machine
+# Setting up your build machine
 https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
 
 # Clone the official warehouse of openwrt
-git clone https://github.com/openwrt/openwrt.git && cd openwrt
+git clone https://github.com/Telecominfraproject/wlan-ap.git && cd wlan-ap
 
 # Select a specific code revision
-git checkout v23.05.0-rc3
+git checkout v2.11.0
 
-# Update the feeds
-./scripts/feeds update -a
-./scripts/feeds install -a
+# Clone and set up the tree
+./setup.py --setup && cd openwrt
+./scripts/gen_config.py ../profiles/glinet_ax1800.yml
 
 # configure the firmware image
-cat > .config << EOF
-CONFIG_TARGET_ath79=y
-CONFIG_TARGET_ath79_nand=y
-CONFIG_TARGET_ath79_nand_DEVICE_glinet_gl-xe300=y
+cat >> .config << EOF
 CONFIG_PACKAGE_cgi-io=y
 CONFIG_PACKAGE_liblua=y
 CONFIG_PACKAGE_liblucihttp=y
@@ -68,10 +65,15 @@ CONFIG_PACKAGE_uhttpd=y
 CONFIG_PACKAGE_uhttpd-mod-ubus=y
 EOF
 
+# Change the dependency of firewall
+sed -i 's/+uci-firewall/+firewall/g' ./package/feeds/luci/luci-app-firewall/Makefile
+
+# delete root password
+# file path : wlan-ap/openwrt/package/base-files/files/etc/shadow
+
 # Build the firmware image
 make defconfig
 make V=s -j1
-
-# image path : openwrt/bin/targets/ath79/nand/openwrt-ath79-nand-glinet_gl-xe300-squashfs-factory.img
+# image path : wlan-ap/openwrt/bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_ax1800-squashfs-sysupgrade.tar
+# warning : the image needs to be upgraded in the system management interface.
 ```
-
