@@ -72,5 +72,5 @@ EOF
 make defconfig
 make V=s -j1
 
-# image path : openwrt/bin/targets/mediatek/filogic/openwrt-mediatek-filogic-glinet_gl-mt3000-squashfs-sysupgrade.bin
+# Image path : openwrt/bin/targets/mediatek/filogic/openwrt-mediatek-filogic-glinet_gl-mt3000-squashfs-sysupgrade.bin
 ```
