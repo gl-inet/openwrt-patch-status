@@ -23,7 +23,7 @@ git checkout v23.05.0-rc3
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-# configure the firmware image
+# Configure the firmware image
 cat > .config << EOF
 CONFIG_TARGET_ath79=y
 CONFIG_TARGET_ath79_nand=y
@@ -72,6 +72,5 @@ EOF
 make defconfig
 make V=s -j1
 
-# image path : openwrt/bin/targets/ath79/nand/openwrt-ath79-nand-glinet_gl-xe300-squashfs-factory.img
+# Image path : openwrt/bin/targets/ath79/nand/openwrt-ath79-nand-glinet_gl-xe300-squashfs-factory.img
 ```
-
