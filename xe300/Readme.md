@@ -10,7 +10,7 @@
 ### compile
 
 ```
-#Setting up your build machine
+# Setting up your build machine
 https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
 
 # Clone the official warehouse of openwrt
