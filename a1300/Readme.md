@@ -10,7 +10,7 @@
 ### compile
 
 ```
-#Setting up your build machine
+# Setting up your build machine
 https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
 
 # Clone the official warehouse of openwrt
@@ -72,5 +72,5 @@ EOF
 make defconfig
 make V=s -j1
 
-# image path : openwrt/bin/targets/ipq40xx/generic/openwrt-ipq40xx-generic-glinet_gl-a1300-squashfs-sysupgrade.bin
+# Image path : openwrt/bin/targets/ipq40xx/generic/openwrt-ipq40xx-generic-glinet_gl-a1300-squashfs-sysupgrade.bin
 ```
