@@ -73,5 +73,4 @@ make defconfig
 make V=s -j1
 
 # Image path : openwrt/bin/targets/ath79/generic/openwrt-ath79-generic-glinet_gl-x750-squashfs-sysupgrade.bin
-# Warning: the image needs to be upgraded in the system management interface.
 ```
