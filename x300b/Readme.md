@@ -1,11 +1,9 @@
 ### openwrt support status
 
 | Version      | status       | link                                                         |
-| ------------ | ------------ | ------------------------------------------------------------ |
-| openwrt main | supported | https://github.com/openwrt/openwrt/tree/openwrt-23.05 |
-|              |              |                                                              |
-|              |              |                                                              |
-|              |              |                                                              |
+| :----------: | :----------: | :----------------------------------------------------------: |
+| openwrt 23.05 | supported | https://github.com/openwrt/openwrt/tree/openwrt-23.05 |
+| openwrt 22.03 | supported | https://github.com/openwrt/openwrt/tree/openwrt-22.03 |
 
 ### compile
 

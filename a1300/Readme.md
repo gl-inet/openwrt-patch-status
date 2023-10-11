@@ -2,10 +2,7 @@
 
 | Version      | status       | link                                                         |
 | :----------: | :----------: | :----------------------------------------------------------: |
-| openwrt main | supported | https://github.com/openwrt/openwrt/tree/openwrt-23.05 |
-|              |              |                                                              |
-|              |              |                                                              |
-|              |              |                                                              |
+| openwrt 23.05 | supported | https://github.com/openwrt/openwrt/tree/openwrt-23.05 |
 
 ### compile
 
@@ -17,8 +14,7 @@ https://openwrt.org/docs/guide-developer/toolchain/beginners-build-guide
 git clone https://github.com/openwrt/openwrt.git && cd openwrt
 
 # Select a specific code revision
-git checkout v23.05.0-rc4
-
+git checkout v23.05.0-rc。/
 # Update the feeds
 ./scripts/feeds update -a
 ./scripts/feeds install -a

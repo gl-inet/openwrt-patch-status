@@ -1,11 +1,14 @@
 ### openwrt support status
 
 | Version      | status       | link                                                         |
-| ------------ | ------------ | ------------------------------------------------------------ |
-| openwrt main | not supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.11.0 |
-|              |              |                                                              |
-|              |              |                                                              |
-|              |              |                                                              |
+| :----------: | :----------: | :----------------------------------------------------------: |
+| wlan-ap v2.11.0 | supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.11.0 |
+| wlan-ap v2.10.0 | supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.10.0 |
+| wlan-ap v2.9.0 | supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.9.0 |
+| wlan-ap v2.8.0 | supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.8.0 |
+| wlan-ap v2.7.0 | supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.7.0 |
+| wlan-ap v2.6.0 | supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.6.0 |
+| wlan-ap v2.5.0 | supported | https://github.com/Telecominfraproject/wlan-ap/tree/v2.5.0 |
 
 ### compile
 

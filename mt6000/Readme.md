@@ -1,11 +1,8 @@
 ### openwrt support status
 
-| Version      | status       | link                                                         |
-| ------------ | ------------ | ------------------------------------------------------------ |
-| openwrt main | supported    | https://github.com/openwrt/openwrt/pull/13414                |
-|              |              |                                                              |
-|              |              |                                                              |
-|              |              |                                                              |
+|   Version    |  status   |                     link                      |
+| :----------: | :-------: | :-------------------------------------------: |
+| openwrt main | supported | https://github.com/openwrt/openwrt/pull/13414 |
 
 ### compile
 
